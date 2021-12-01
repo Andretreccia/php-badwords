@@ -1,10 +1,18 @@
 <? 
-$testo_a_scelta= "Questo è il testo che ho scelto per questo censura di esercizio ";
+$testo_a_scelta= 'Questo è il testo che ho scelto per questo esercizio';
 
 var_dump($testo_a_scelta);
 var_dump(strlen($testo_a_scelta));
 
 echo $testo_a_scelta;
+
+$censura = $_GET['censura'];
+
+
+var_dump(str_replace($censura, '***', $testo_a_scelta));
+
+$censurata = str_replace($censura, '***', $testo_a_scelta);
+
 ?>
 
 <!DOCTYPE html>
@@ -24,5 +32,8 @@ echo $testo_a_scelta;
     <p>
        <?= strlen($testo_a_scelta) ?>
     </p>
+<h2>Censura </h2>
+<p>scrivi "?censura=" + "la parola o la lettera che vuoi censurare" </p>
+<p><?= $censurata ?></p>
 </body>
 </html>
