@@ -32,8 +32,10 @@ $censurata = str_replace($censura, '***', $testo_a_scelta);
     <p>
        <?= strlen($testo_a_scelta) ?>
     </p>
-<h2>Censura </h2>
+<h2>Censura: </h2>
 <p>scrivi "?censura=" + "la parola o la lettera che vuoi censurare" </p>
 <p><?= $censurata ?></p>
+<h2>lunghezza del testo censurato:</h2>
+<p><?= strlen($censurata) ?></p>
 </body>
 </html>
